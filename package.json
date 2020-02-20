@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "GraphQL handle authentication and authorization",
   "main": "index.js",
-  "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js --ignore 'src/db/db.json'",
-    "test": "echo 'Configure Tests'"
-  },
   "dependencies": {
     "apollo-server": "^2.10.1",
     "date-fns": "^2.9.0",
