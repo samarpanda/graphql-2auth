@@ -1,0 +1,21 @@
+{
+  "name": "graphql-2auth",
+  "version": "1.0.0",
+  "description": "GraphQL handle authentication and authorization",
+  "main": "index.js",
+  "dependencies": {
+    "apollo-server": "^2.10.1",
+    "date-fns": "^2.9.0",
+    "jsonwebtoken": "^8.5.1",
+    "lowdb": "^1.0.0",
+    "nanoid": "^2.1.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  },
+  "repository": "git@github.com:samarpanda/graphql-2auth.git",
+  "author": "Samar Panda <er.samarpanda@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
