@@ -1,3 +1,5 @@
+const { AuthenticationError } = require('apollo-server');
+
 const jwt = require('jsonwebtoken');
 const { models } = require('./db');
 const secret = process.env.SECRET || 'pick-my-secret';
@@ -28,7 +30,13 @@ const getUserFromToken = token => {
  * continues to the next resolver if true
  * @param {Function} next next resolver function to run
  */
-const authenticated = next => (root, args, context, info) => {};
+const authenticated = next => (root, args, context, info) => {
+  if (!context.user) {
+    throw new AuthenticationError('must authenticate');
+  }
+
+  return next(root, args, context, info);
+};
 
 /**
  * checks if the user on the context has the specified role.
@@ -36,7 +44,13 @@ const authenticated = next => (root, args, context, info) => {};
  * @param {String} role enum role to check for
  * @param {Function} next next resolver function to run
  */
-const authorized = (role, next) => ((root, args, context, info) = {});
+const authorized = (role, next) => (root, args, context, info) => {
+  if (context.user.role !== role) {
+    throw new AuthenticationError(`you must have ${role} role`);
+  }
+
+  return next(root, args, context, info);
+};
 
 module.exports = {
   getUserFromToken,
