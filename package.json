@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js --ignore 'src/db/db.json'",
-    "test": "echo 'Configure Tests'"
+    "test": "jest tests"
   },
   "dependencies": {
     "apollo-server": "^2.10.1",
@@ -16,6 +16,8 @@
     "nanoid": "^2.1.11"
   },
   "devDependencies": {
+    "apollo-server-testing": "^2.10.1",
+    "jest": "^25.1.0",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1"
   },
