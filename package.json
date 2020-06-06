@@ -9,7 +9,7 @@
     "test": "jest tests"
   },
   "dependencies": {
-    "apollo-server": "^2.10.1",
+    "apollo-server": "^2.14.2",
     "date-fns": "^2.9.0",
     "jsonwebtoken": "^8.5.1",
     "lowdb": "^1.0.0",
