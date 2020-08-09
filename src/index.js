@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server');
-const typeDefs = require('./typedefs');
-const resolvers = require('./resolvers');
+const gqlmodules = require('./gqlmodules');
+const { typeDefs, resolvers } = gqlmodules;
 const { createToken, getUserFromToken } = require('./auth');
 const db = require('./db');
 const PORT = process.env.PORT || 4000;

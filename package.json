@@ -9,6 +9,7 @@
     "test": "jest tests"
   },
   "dependencies": {
+    "@graphql-modules/core": "^0.7.17",
     "apollo-server": "^2.16.1",
     "date-fns": "^2.15.0",
     "jsonwebtoken": "^8.5.1",
