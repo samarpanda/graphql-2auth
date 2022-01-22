@@ -14,7 +14,7 @@
     "date-fns": "^2.15.0",
     "jsonwebtoken": "^8.5.1",
     "lowdb": "^1.0.0",
-    "nanoid": "^3.1.12"
+    "nanoid": "^3.1.31"
   },
   "devDependencies": {
     "apollo-server-testing": "^2.16.1",
